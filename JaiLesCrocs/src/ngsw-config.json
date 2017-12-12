@@ -1,0 +1,20 @@
+{
+  "index": "/index.html",
+  "assetGroups": [{
+    "name": "Jai Les Crocs",
+    "resources": {
+      "files": [
+        "/assets/**/*",
+        "/assets/icon/*",
+        "!/ngsw-worker.js"
+      ],
+      "versionedFiles": [
+        "/**/*.html",
+        "/**/*.js",
+        "/**/*.css"
+      ],
+      "urls": [
+       ]
+    }
+  }]
+}

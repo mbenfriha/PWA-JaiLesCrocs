@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Cookies';
+  src: url('../assets/Cookies.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PeanutButter';
+  src: url('../assets/PeanutButterCookies.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

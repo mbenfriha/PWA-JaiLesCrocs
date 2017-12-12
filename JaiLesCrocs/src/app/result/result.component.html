@@ -1,3 +1,40 @@
-<p>
-  result works!
-</p>
+<div class="container">
+
+  <div class="row" *ngIf="result">
+
+    <div class="col-12">
+      <div class="photo" *ngIf="result.image" [ngStyle]="{'background': 'url('+result.image+') no-repeat center'}"></div>
+      <div class="photo" *ngIf="!result.image" style="background: url('https://fetch-livraison.com/wp-content/uploads/2017/02/resto-sondage.jpg')"></div>
+      <div class="informations">
+
+        <h1>{{result.name}}</h1>
+        <hr/>
+        <h2>
+          {{result.distance}} mètres
+        </h2>
+        <span>d'ici</span>
+        <hr/>
+        <div class="details">
+          <div *ngIf="result.international_phone_number"><img src="assets/icon/phone.png" class="icon-info" alt="">{{result.international_phone_number}}</div>
+          <div *ngIf="result.rating"><img src="assets/icon/star.png" class="icon-info" alt="">{{result.rating}}/5</div>
+          <div class="adress">{{result.formatted_address}}</div>
+          <div class="row">
+            <div class="gps">
+
+              <a href="{{'waze://?ll='+ lat +','+ lng +'&navigate=yes'}}">
+                <button class="btn">Itinéraire</button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="map" *ngIf="result.geometry">
+          <agm-map [maxZoom]=100 [zoom]=16 [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng" [title]="'Restaurant'"></agm-marker>
+            <agm-marker [latitude]="myLat" [longitude]="myLng" ></agm-marker>
+          </agm-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
