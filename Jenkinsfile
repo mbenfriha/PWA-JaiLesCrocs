@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('npm i') {
       steps {
-        sh 'npm i'
+        sh 'cd JaiLesCrocs && npm i'
       }
     }
     stage('ng build') {
