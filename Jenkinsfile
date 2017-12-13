@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('npm i') {
       steps {
-        sh 'cd JaiLesCrocs && npm i'
+        sh 'cd JaiLesCrocs'
+        sh 'npm install'
       }
     }
     stage('ng build') {
