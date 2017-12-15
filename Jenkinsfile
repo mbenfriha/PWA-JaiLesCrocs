@@ -13,7 +13,7 @@ pipeline {
     }
     stage('mv') {
       steps {
-        sh 'cp ./dist/* /var/www/jailescrocs/assets'
+        sh 'cp -R ./dist/* /var/www/jailescrocs/assets/'
       }
     }
   }
