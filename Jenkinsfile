@@ -11,7 +11,7 @@ pipeline {
         sh 'npm run build-prod-ngsw'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         sh 'mv dist /var/www/jailescrocs/assets'
       }
