@@ -8,7 +8,12 @@ pipeline {
     }
     stage('ng build') {
       steps {
-        sh 'ng build --prod'
+        sh 'npm run build-prod-ngsw'
+      }
+    }
+    stage('') {
+      steps {
+        sh 'mv dist /var/www/jailescrocs/assets'
       }
     }
   }
