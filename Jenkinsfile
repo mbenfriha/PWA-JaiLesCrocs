@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('npm i') {
       steps {
-        sh 'npm install'
+        sh 'echo "$USER"'
       }
     }
     stage('ng build') {
