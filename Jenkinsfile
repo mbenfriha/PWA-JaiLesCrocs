@@ -11,9 +11,9 @@ pipeline {
         sh 'npm run build-prod-ngsw'
       }
     }
-    stage('error') {
+    stage('mv') {
       steps {
-        sh 'mv dist /var/www/jailescrocs/assets'
+        sh 'cp ./dist/* /var/www/jailescrocs/assets'
       }
     }
   }
